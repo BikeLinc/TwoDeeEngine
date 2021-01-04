@@ -13,7 +13,7 @@ public class MainGameLoop {
 
 	Level level            = new Level();
 	UserInput input        = new UserInput();
-	DisplayManager display = new DisplayManager(input, level);
+	DisplayManager display = new DisplayManager(level);
 
 	private final static int FPS_CAP = 1000 / 60;
 
@@ -22,6 +22,7 @@ public class MainGameLoop {
 	 */
 	public void start() {
 		display.createWindow();
+		display.addKeyListener(input);
 		loop.start();
 	}
 

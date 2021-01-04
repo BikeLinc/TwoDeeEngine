@@ -4,12 +4,28 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class UserInput implements KeyListener {
-
+	
 	public boolean wPressed = false;
 	public boolean sPressed = false;
 	public boolean aPressed = false;
 	public boolean dPressed = false;
-
+	
+	public boolean isMoveLeftClicked() {
+		return aPressed;
+	}
+	
+	public boolean isMoveRightClicked() {
+		return dPressed;
+	}
+	
+	public boolean isMoveUpClicked() {
+		return wPressed;
+	}
+	
+	public boolean isMoveDownClicked() {
+		return sPressed;
+	}
+		
 	@Override
 	public void keyTyped(KeyEvent e) { }
 

@@ -23,13 +23,11 @@ public class DisplayManager {
 	JFrame    frame;
 	JPanel    panel;
 	Level     level;
-	UserInput input;
 	Renderer  renderer;
 	
 	List<Block> scene = new ArrayList<>();
 	
-	public DisplayManager(UserInput input, Level level) {
-		this.input    = input;
+	public DisplayManager(Level level) {
 		this.level    = level;
 		this.renderer = new Renderer();
 	}
@@ -38,10 +36,9 @@ public class DisplayManager {
 	 * This Method Creates a New Window To Draw On
 	 * Call This Method In The MainGameLoop Class Prior To The Game Loop
 	 */
-	public void createWindow() { // Creates New Window Instance
+	public void createWindow() { // Creates New Window Instance	
 		this.frame = new JFrame(WINDOW_TITLE);
 		this.panel = new Panel();
-		frame.addKeyListener(input);
 		frame.setSize(WINDOW_SIZE);
 		panel.setSize(WINDOW_SIZE);
 		frame.setLocation(SCREEN_SIZE.width/2-WINDOW_SIZE.width/2, SCREEN_SIZE.height/2-WINDOW_SIZE.height/2);
@@ -63,6 +60,10 @@ public class DisplayManager {
 		renderer.prepare(level);
 		scene = renderer.getScene(); 
 		panel.repaint();
+	}
+	
+	public void addKeyListener(UserInput input) {
+		frame.addKeyListener(input);
 	}
 	
 
