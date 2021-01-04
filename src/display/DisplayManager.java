@@ -17,7 +17,7 @@ import scene.Level;
 public class DisplayManager {
 	
 	public final static String    WINDOW_TITLE = "CyclEngine";
-	public final static Dimension WINDOW_SIZE  = new Dimension(640,480);
+public final static Dimension WINDOW_SIZE  = new Dimension(1920			,1080);
 	public final static Dimension SCREEN_SIZE  = Toolkit.getDefaultToolkit().getScreenSize();
 	
 	JFrame    frame;

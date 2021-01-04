@@ -18,7 +18,7 @@ public class Level {
 		new Color(200, 20, 20)); // Color
 
 	Collidable[] collidables = { 
-		new Collidable(0, 400 + 0, 100, 60),
+		new Collidable(0, 400 + 0, 500, 60),
 	};
 	/*
 	 * This Method Is Called To Check For User Input
@@ -50,7 +50,7 @@ public class Level {
 	 * Method Called To Move All Non-Player Objects
 	 */
 	public void moveScene(int x, int y) {
-		for(Block block: collidables) {
+		for(Block block: collidables) {  
 			block.x += x;
 			block.y += y;
 		}
