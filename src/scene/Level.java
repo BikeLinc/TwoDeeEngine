@@ -25,7 +25,7 @@ public class Level {
 	 */
 	public void update(UserInput input) {
 		
-		movement = new Movement(this, MOVE_SPEED, input, player, collidables);
+		movement = new Movement(this, input, player, collidables);
 		movement.move();
 		
 	}
