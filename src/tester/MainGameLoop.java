@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.Timer;
 
-import display.DisplayManager;
+import display.Display;
 import input.UserInput;
 import scene.Level;
 
@@ -13,7 +13,7 @@ public class MainGameLoop {
 
 	Level level            = new Level();
 	UserInput input        = new UserInput();
-	DisplayManager display = new DisplayManager(level);
+	Display display = new Display(level);
 
 	private final static int FPS_CAP = 1000 / 60;
 

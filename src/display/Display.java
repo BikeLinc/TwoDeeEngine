@@ -14,11 +14,11 @@ import input.UserInput;
 import scene.Block;
 import scene.Level;
 
-public class DisplayManager {
+public class Display {
 	
-	public final static String    WINDOW_TITLE = "CyclEngine";
-public final static Dimension WINDOW_SIZE  = new Dimension(640,480);
-	public final static Dimension SCREEN_SIZE  = Toolkit.getDefaultToolkit().getScreenSize();
+	static final String    WINDOW_TITLE = "CyclEngine";
+	static final Dimension WINDOW_SIZE  = new Dimension(640,480);
+	static final Dimension SCREEN_SIZE  = Toolkit.getDefaultToolkit().getScreenSize();
 	
 	JFrame    frame;
 	JPanel    panel;
@@ -27,7 +27,7 @@ public final static Dimension WINDOW_SIZE  = new Dimension(640,480);
 	
 	List<Block> scene = new ArrayList<>();
 	
-	public DisplayManager(Level level) {
+	public Display(Level level) {
 		this.level    = level;
 		this.renderer = new Renderer();
 	}
@@ -60,6 +60,10 @@ public final static Dimension WINDOW_SIZE  = new Dimension(640,480);
 		renderer.prepare(level);
 		scene = renderer.getScene(); 
 		panel.repaint();
+	}
+	
+	public static Dimension getWindowSize() {
+		return WINDOW_SIZE;
 	}
 	
 	public void addKeyListener(UserInput input) {

@@ -5,6 +5,7 @@ import java.awt.Rectangle;
 
 public class Block extends Rectangle {
 	
+	private static final long serialVersionUID = 1L;
 	Color color;
 	
 	public Block(int x, int y, int width, int height, Color color) {
@@ -12,7 +13,7 @@ public class Block extends Rectangle {
 		this.y      = y;
 		this.width  = width;
 		this.height = height;
-		this.color  = color;
+		this.color  = color;ddd
 	}
 	
 	public Color getColor() {

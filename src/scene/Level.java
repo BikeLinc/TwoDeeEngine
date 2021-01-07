@@ -1,19 +1,19 @@
 package scene;
 
 import java.awt.Color;
-
-import Physics.Movement;
-import display.DisplayManager;
+import Physics.Movement;	
+import display.Display;
 import input.UserInput;
 
 public class Level {
 	
-	private final static int MOVE_SPEED = 5;
-	
 	Movement movement;
-
-	Block player = new Block(DisplayManager.WINDOW_SIZE.width / 2 - 20, // X
-		DisplayManager.WINDOW_SIZE.height / 2 - 20, // Y
+	Display display;
+	
+	int windowSize = 0;
+	
+	Block player = new Block(Display.getWindowSize().width / 2 - 20, // X
+		Display.getWindowSize().height / 2 - 20, // Y
 		40, 40, // Width, Height
 		new Color(200, 20, 20)); // Color
 
