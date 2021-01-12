@@ -44,24 +44,12 @@ public class Movement {
 		
 		if(direction[1]) {
 			falling = true;
-			
 		}
 		
-		// Jumping
-		if(input.isMoveUpClicked() && !direction[1]) {
-			jumping = true;
-			jumpingSpeed = INITIAL_JUMP_SPEED;
-		}
-		// if Speed > 0 && !Jumping
-			// move(0,speed)
-		// else if Speed == 0 
-			// Jumping False
-		if(jumpingSpeed > 0 && jumping) {
-			level.moveScene(0, jumpingSpeed);
-			jumpingSpeed -= WEIGHT;
+		// Up
+		if(input.isMoveUpClicked() && direction[0]) {
+			level.moveScene(0, MOVE_SPEED);
 			falling = false;
-		} else {
-			jumping = false;
 		}
 		if(falling) {
 			level.moveScene(0, -MOVE_SPEED);

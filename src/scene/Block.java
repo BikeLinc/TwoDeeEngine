@@ -13,7 +13,7 @@ public class Block extends Rectangle {
 		this.y      = y;
 		this.width  = width;
 		this.height = height;
-		this.color  = color;ddd
+		this.color  = color;
 	}
 	
 	public Color getColor() {
