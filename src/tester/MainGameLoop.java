@@ -23,6 +23,7 @@ public class MainGameLoop {
 	public void start() {
 		display.createWindow();
 		display.addKeyListener(input);
+		level.setup();
 		loop.start();
 	}
 

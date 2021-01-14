@@ -1,5 +1,7 @@
 package Physics;
 
+import java.util.ArrayList;
+
 import scene.Block;
 import scene.Collidable;
 
@@ -12,7 +14,7 @@ public class Collider {
 			true, // right [3]
 	};
 
-	public boolean[] checkBounds(Block player, Collidable[] collidables) {
+	public boolean[] checkBounds(Block player, ArrayList<Collidable> collidables) {
 		for (Collidable collidable : collidables) {
 			// down
 			if (collidable.y -1 < player.y + player.height && player.y < collidable.y) {

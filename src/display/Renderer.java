@@ -16,7 +16,7 @@ public class Renderer {
 	 * @param level
 	 */
 	public void prepare(Level level) {
-		Collidable[] collidables = level.getCollidables();
+		ArrayList<Collidable> collidables = level.getCollidables();
 		Block player             = level.getPlayer();
 		
 		blocks.clear();

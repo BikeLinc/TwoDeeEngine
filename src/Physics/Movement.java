@@ -1,5 +1,7 @@
 package Physics;
 
+import java.util.ArrayList;
+
 import input.UserInput;
 import scene.Block;
 import scene.Collidable;
@@ -12,7 +14,7 @@ public class Movement {
 	Level level;
 	UserInput input;
 	Block player;
-	Collidable[] collidables;
+	ArrayList<Collidable> collidables;
 	
 	final static int MOVE_SPEED         = 5;
 	final static int WEIGHT             = 2;
@@ -31,14 +33,14 @@ public class Movement {
 	boolean falling = false;
 	boolean jumping = false;
 	
-	public Movement(Level level, UserInput input, Block player, Collidable[] collidables) {
+	public Movement(Level level, UserInput input, Block player, ArrayList<Collidable> collidables) {
 		this.level         = level;
 		this.input         = input;
 		this.player        = player;
 		this.collidables   = collidables;
 	}
 
-	public void move() {
+	public void move(int forwardMomentum) {
 		
 		direction = collider.checkBounds(player, collidables);
 		
@@ -65,6 +67,9 @@ public class Movement {
 		// Right
 		if(input.isMoveRightClicked() && direction[2]) {
 			level.moveScene(-MOVE_SPEED, 0);
+		}
+		if(direction[2]) {
+			level.moveScene(-forwardMomentum, 0);
 		}
 	}
 }

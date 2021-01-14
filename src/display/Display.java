@@ -16,7 +16,7 @@ import scene.Level;
 
 public class Display {
 	
-	static final String    WINDOW_TITLE = "CyclEngine";
+	static final String    WINDOW_TITLE = "Oi!";
 	static final Dimension WINDOW_SIZE  = new Dimension(640,480);
 	static final Dimension SCREEN_SIZE  = Toolkit.getDefaultToolkit().getScreenSize();
 	
