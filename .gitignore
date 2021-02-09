@@ -1,3 +1,5 @@
 
 *.java
 *.class
+/nbproject/private/
+/build/
