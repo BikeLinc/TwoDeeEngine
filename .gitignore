@@ -3,3 +3,6 @@
 *.class
 /nbproject/private/
 /build/
+!/src/editor/Asset.java
+!/src/editor/AssetManager.java
+!/src/scene/GameObject.java
