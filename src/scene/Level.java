@@ -5,18 +5,18 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import Physics.Movement;
-import display.Display;
+import display.Window;
 import input.UserInput;
 
 public class Level {
 	
 	Movement movement;
-	Display display;
+	Window display;
 	
 	int windowSize = 0;
 	
-	Block player = new Block(Display.getWindowSize().width / 2 - 20, // X
-		Display.getWindowSize().height / 2 - 20, // Y
+	Block player = new Block(Window.getWindowSize().width / 2 - 20, // X
+		Window.getWindowSize().height / 2 - 20, // Y
 		40, 40, // Width, Height
 		new Color(200, 20, 20)); // Color
 	ArrayList<Collidable> collidables = new ArrayList<>();

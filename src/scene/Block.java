@@ -3,7 +3,7 @@ package scene;
 import java.awt.Color;
 import java.awt.Rectangle;
 
-public class Block extends Rectangle {
+public class Block extends Rectangle{
 	
 	private static final long serialVersionUID = 1L;
 	Color color;

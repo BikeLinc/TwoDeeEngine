@@ -14,7 +14,7 @@ import input.UserInput;
 import scene.Block;
 import scene.Level;
 
-public class Display {
+public class Window {
 	
 	static final String    WINDOW_TITLE = "Oi!";
 	static final Dimension WINDOW_SIZE  = new Dimension(640,480);
@@ -27,7 +27,7 @@ public class Display {
 	
 	List<Block> scene = new ArrayList<>();
 	
-	public Display(Level level) {
+	public Window(Level level) {
 		this.level    = level;
 		this.renderer = new Renderer();
 	}

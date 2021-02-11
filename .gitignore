@@ -6,3 +6,13 @@
 !/src/editor/Asset.java
 !/src/editor/AssetManager.java
 !/src/scene/GameObject.java
+!/src/components/GameObject.java
+!/src/components/Module.java
+!/src/control/Assembler.java
+!/src/scene/Scene.java
+!/src/components/GameObjectType.java
+!/src/modules/RectangleModule.java
+!/src/modules/Module.java
+!/src/scene/FlappyBirdScene.java
+!/src/components/SingleColorBlock.java
+!/src/display/Window.java

@@ -7,7 +7,7 @@ import scene.Block;
 import scene.Collidable;
 import scene.Level;
 
-public class Movement {
+public class Movement{
 	
 	Collider collider = new Collider();
 	

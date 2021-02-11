@@ -5,15 +5,18 @@ import java.awt.event.ActionListener;
 
 import javax.swing.Timer;
 
-import display.Display;
+import display.Window;
 import input.UserInput;
+import scene.FlappyBirdScene;
 import scene.Level;
+import scene.Scene;
 
 public class MainGameLoop {
 
-	Level level            = new Level();
-	UserInput input        = new UserInput();
-	Display display = new Display(level);
+	Level level = new Level();
+        Scene scene = new FlappyBirdScene(0);
+	UserInput input = new UserInput();
+	Window window = new Window(level);
 
 	private final static int FPS_CAP = 1000 / 60;
 
@@ -21,12 +24,15 @@ public class MainGameLoop {
 	 * This Method Is Called To Do All Setup Before Game Loop
 	 */
 	public void start() {
-		display.createWindow();
-		display.addKeyListener(input);
+		window.createWindow();
+		window.addKeyListener(input);
+                
+                scene.setup();
+                //
 		level.setup();
 		loop.start();
 	}
-
+        
 	/*
 	 * Main Game Loop
 	 */
@@ -34,7 +40,7 @@ public class MainGameLoop {
 		@Override
 		public void actionPerformed(ActionEvent event) {
 			level.update(input);
-			display.update();
+			window.update();
 		}
 	});
 }
